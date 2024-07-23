@@ -1,0 +1,1 @@
+from coala.datasets.digits_five.digits_five import construct_digits_five_datasets

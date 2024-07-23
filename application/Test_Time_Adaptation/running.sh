@@ -1,0 +1,12 @@
+python application/Test_Time_Adaptation/main.py --gpus 4 --method fedavg  --dataset digits_five --num_of_clients 5 --clients_per_round 5 --shift_type c_shift  --rounds 50
+python application/Test_Time_Adaptation/main.py --gpus 4 --method fedicon --dataset digits_five --num_of_clients 5 --clients_per_round 5 --shift_type c_shift  --rounds 50
+python application/Test_Time_Adaptation/main.py --gpus 4 --method fedavg  --dataset office_caltech --num_of_clients 4 --clients_per_round 4 --shift_type c_shift --rounds 100
+python application/Test_Time_Adaptation/main.py --gpus 4 --method fedicon --dataset office_caltech --num_of_clients 4 --clients_per_round 4 --shift_type c_shift --rounds 100
+python application/Test_Time_Adaptation/main.py --gpus 4 --method fedavg  --dataset cifar10 --num_of_clients 20 --clients_per_round 20 --shift_type c_shift --split_type iid --rounds 100 --batch_size 128
+python application/Test_Time_Adaptation/main.py --gpus 4 --method fedicon --dataset cifar10 --num_of_clients 20 --clients_per_round 20 --shift_type c_shift --split_type iid --rounds 100 --batch_size 128
+python application/Test_Time_Adaptation/main.py --gpus 4 --method fedavg  --dataset cifar10.1 --num_of_clients 20 --clients_per_round 20 --shift_type f_shift --split_type iid --rounds 100 --batch_size 128
+python application/Test_Time_Adaptation/main.py --gpus 4 --method fedicon --dataset cifar10.1 --num_of_clients 20 --clients_per_round 20 --shift_type f_shift --split_type iid --rounds 100 --batch_size 128
+python application/Test_Time_Adaptation/main.py --gpus 4 --method fedavg  --dataset cifar10 --num_of_clients 20 --clients_per_round 20 --shift_type c_shift --split_type dir --rounds 100 --batch_size 128
+python application/Test_Time_Adaptation/main.py --gpus 4 --method fedicon --dataset cifar10 --num_of_clients 20 --clients_per_round 20 --shift_type c_shift --split_type dir --rounds 100 --batch_size 128
+python application/Test_Time_Adaptation/main.py --gpus 4 --method fedavg  --dataset cifar10.1 --num_of_clients 20 --clients_per_round 20 --shift_type f_shift --split_type dir --rounds 100 --batch_size 128
+python application/Test_Time_Adaptation/main.py --gpus 4 --method fedicon --dataset cifar10.1 --num_of_clients 20 --clients_per_round 20 --shift_type f_shift --split_type dir --rounds 100 --batch_size 128

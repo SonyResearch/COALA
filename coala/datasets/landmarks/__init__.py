@@ -1,0 +1,1 @@
+from coala.datasets.landmarks.landmarks import construct_landmarks_datasets

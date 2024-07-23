@@ -1,14 +1,8 @@
-<div align="center">
-  <h1 align="center">COALA: A Practical and Vision-centric Federated Learning Platform</h1>
-
-[📘 Documentation](https://coalafl.netlify.app/) | [🛠️ Installation](https://coalafl.netlify.app/get_started.html)
-</div>
-
-## Introduction
+# Introduction
 
 COALA is a practical and vision federated learning (FL) platform, and a suite of benchmarks for practical FL scenarios, which we categorize into three levels: task, data, and model.
 
-<img src="images/coala-overview.png" width="700">
+![COALA Overview](_static/image/coala-overview.png)
 
 At the task level, COALA extends support from simple classification to 15 computer vision tasks, including object detection, segmentation, pose estimation, and more. It also facilitates federated multiple-task learning, allowing clients to tackle multiple tasks simultaneously. 
 
@@ -25,32 +19,3 @@ You can use it for:
 * Proof-of-concept (POC) of new FL applications
 * Production-level FL applications
 
-
-## Getting Started
-
-You can refer to [Get Started](docs/en/get_started.md) for installation and [Quick Run](docs/en/quick_run.md) for the simplest way of using COALA.
-
-For more advanced usage, we provide a list of tutorials on:
-* [High-level APIs](docs/en/tutorials/high-level_apis.md)
-* [Configurations](docs/en/tutorials/config.md)
-* [Datasets](docs/en/tutorials/dataset.md)
-* [Models](docs/en/tutorials/model.md)
-* [Customize Server and Client](docs/en/tutorials/customize_server_and_client.md)
-* [Distributed Training](docs/en/tutorials/distributed_training.md)
-
-
-# License
-
-This project is released under the [Apache 2.0 license](LICENSE).
-
-# Citation
-
-If you use this platform or related projects in your research, please cite this paper.
-
-```
-@inproceedings{zhuangcoala,
-  title={COALA: A Practical and Vision-Centric Federated Learning Platform},
-  author={Zhuang, Weiming and Xu, Jian and Chen, Chen and Li, Jingtao and Lyu, Lingjuan},
-  booktitle={Forty-first International Conference on Machine Learning}
-}
-```

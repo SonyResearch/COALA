@@ -1,0 +1,18 @@
+# hyper-params for synthetic data generation
+synth:
+  synthesis_batch_size: 256
+  sample_batch_size: 256
+  g_steps: 10
+  is_maml: 1
+  kd_steps: 400
+  warmup: 20
+  lr_g: 0.002
+  lr_z: 0.01
+  oh: 0.5
+  T: 20.0
+  adv: 1.0
+  bn: 10.0
+  reset_l0: 1
+  reset_bn: 0
+  bn_mmt: 0.9
+  syn_round: 10

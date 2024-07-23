@@ -1,0 +1,6 @@
+from .data import construct_datasets_selfsupervised
+from .cifar10_self import construct_cifar10_selfsupervised_datasets
+from .cifar100_self import construct_cifar100_selfsupervised_datasets
+
+
+__all__ = ['construct_datasets_selfsupervised', 'construct_cifar10_selfsupervised_datasets', 'construct_cifar100_selfsupervised_datasets']

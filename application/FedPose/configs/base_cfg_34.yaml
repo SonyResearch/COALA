@@ -1,0 +1,45 @@
+
+model:
+  name: "pose_resnet"
+  pretrained: True
+  num_joints: 16
+  image_size: [256, 256]  # width * height, ex: 192 * 256
+  # pose_resnet related params
+  extra:
+    num_layers: 34
+    deconv_with_bias: False
+    num_deconv_layers: 3
+    num_deconv_filters: [256, 256, 256]
+    num_deconv_kernels: [4, 4, 4]
+    final_conv_kernel: 1
+    target_type: 'gaussian'
+    heatmap_size: [64, 64]  # width * height, ex: 24 * 32
+    sigma: 2
+
+  style: "pytorch"
+
+loss:
+  use_target_weight: True
+
+output_dir: "./data/mpii/"
+
+data:
+  dataset: "mpii"
+  train_set: "train"
+  test_set: "valid"
+  data_format: "jpg"
+  select_data: False
+
+  flip: True
+  scale_factor: 0.25
+  rot_factor: 30
+
+
+test:
+  flip_test: False
+  post_process: True
+  shift_heatmap: True
+  use_gt_bbox: False
+
+
+

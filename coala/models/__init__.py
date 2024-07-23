@@ -1,0 +1,1 @@
+from coala.models.model import BaseModel

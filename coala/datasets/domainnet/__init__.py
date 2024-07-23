@@ -1,0 +1,1 @@
+from coala.datasets.domainnet.domainnet import construct_domainnet_datasets
