@@ -26,7 +26,7 @@
     pip install torch==1.10.1 torchvision==0.11.2
     ```
 
-4. _You can skip the following CUDA-related content if you plan to run it on CPU._ Make sure that your compilation CUDA version and runtime CUDA version match. 
+4. _You can skip the following CUDA-related content if you plan to run it on CPU._
 
     Note: Make sure that your compilation CUDA version and runtime CUDA version match.
     You can check the supported CUDA version for precompiled packages on the [PyTorch website](https://pytorch.org/).
@@ -56,7 +56,7 @@ pip install coala-fl
 
 ### A from-scratch setup script
 
-Assuming that you already have CUDA 10.1 installed, here is a full script for setting up MMDetection with conda.
+Assuming that you already have CUDA 10.1 installed, here is a full script for setting up COALA with conda.
 
 ```shell
 conda create -n coala python=3.7 -y
@@ -69,9 +69,7 @@ conda install pytorch==1.6.0 torchvision==0.7.0 -c pytorch -y
 conda install pytorch==1.6.0 torchvision==0.7.0 cudatoolkit=10.1 -c pytorch -y
 
 # install coala
-git clone https://github.com/SonyResearch/COALA.git
-cd coala
-pip install -v -e .
+pip install coala-fl
 ```
 
 ## Verification

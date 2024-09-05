@@ -1,6 +1,6 @@
 ## Examples
 
-We provide examples in [examples folder](https://github.com/SonyResearch/COALA/tree/main/examples), including examples to quickly run experiments with FEMNIST, CIFAR-10, customize tracking, and more.
+Various examples are provided in [examples folder](https://github.com/SonyResearch/COALA/tree/main/examples), including how to quickly run experiments with FEMNIST, CIFAR-10, customize tracking, and more.
 
 ## High-level Introduction
 
@@ -8,7 +8,7 @@ COALA provides numerous existing models and datasets. Models include LeNet, RNN,
 This note will present how to start training with these existing models and standard datasets.
 
 COALA provides three types of high-level APIs: **registration**, **initialization**, and **execution**.
-Registration is for registering customized components, which we will introduce in the following notes.
+Registration is for registering customized components, which will be introduced in the following notes.
 In this note, we focus on **initialization** and **execution**.
 
 ## Simplest Run
