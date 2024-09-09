@@ -1,6 +1,6 @@
 # Introduction
 
-COALA is a practical and vision federated learning (FL) platform, and a suite of benchmarks for practical FL scenarios, which we categorize into three levels: task, data, and model.
+COALA is a practical and vision-centric federated learning (FL) platform, and a suite of benchmarks for practical FL scenarios, which are categorized into three levels: task, data, and model.
 
 ![COALA Overview](_static/image/coala-overview.png)
 
@@ -10,7 +10,7 @@ At the data level, COALA goes beyond supervised FL to benchmark both semi-superv
 
 At the model level, COALA benchmarks FL with split models and different models in different clients. 
 
-COALA platform offers three degrees of customization for practical FL scenarios, including configuration customization, components customization, and workflow customization.
+COALA offers three degrees of customization for practical FL scenarios, including configuration customization, components customization, and workflow customization.
 
 It enables users with various levels of expertise to experiment and prototype FL applications with little/no coding. It aims to support production-level deployment of FL applications for a wide-range of business use cases, such as smart city, smart retail, and smart factory applications.
 
