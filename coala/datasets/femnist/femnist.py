@@ -128,7 +128,7 @@ def construct_femnist_datasets(root,
     setting = BaseDataset.get_setting_folder(dataset_name, split_type, num_of_clients, min_size, class_per_client,
                                              data_amount, iid_fraction, user_str, train_test_split, alpha,
                                              quantity_weights)
-    dir_path = os.path.dirname(os.path.realpath(__file__))
+    dir_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
     dataset_file = os.path.join(dir_path, "data_process", "{}.py".format(dataset_name))
     if not os.path.exists(dataset_file):
         logger.error("Please specify a valid process file path for process_x and process_y functions.")
