@@ -1,5 +1,5 @@
 <div align="center">
-  <h1 align="center">COALA: A Practical and Vision-centric Federated Learning Platform</h1>
+  <h1 align="center">COALA: A Practical and Vision-centric Federated Learning Platform (ICML24: https://openreview.net/pdf?id=ATRnM8PyQX)</h1>
 
 [📘 Documentation](https://coalafl.netlify.app/) | [🛠️ Installation](https://coalafl.netlify.app/get_started.html)
 </div>
