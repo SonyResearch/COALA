@@ -278,7 +278,7 @@ class Coordinator(object):
 
         client.start_service()
 
-    def register_dataset(self, train_data, test_data, val_data=None):
+    def register_dataset(self, train_data, test_data, val_data=None, s_train_data=None, u_train_data=None):
         """Register datasets.
 
         Datasets should inherit from :obj:`FederatedDataset`, e.g., :obj:`FederatedTensorDataset`.
@@ -287,11 +287,15 @@ class Coordinator(object):
             train_data (:obj:`FederatedDataset`): Training dataset.
             test_data (:obj:`FederatedDataset`): Testing dataset.
             val_data (:obj:`FederatedDataset`): Validation dataset.
+            s_train_data (:obj:`FederatedDataset`): Supervised training dataset (semi-supervised setting only).
+            u_train_data (:obj:`FederatedDataset`): Unsupervised training dataset (semi-supervised setting only).
         """
         self.registered_dataset = True
         self.train_data = train_data
         self.test_data = test_data
         self.val_data = val_data
+        self.s_train_data = s_train_data
+        self.u_train_data = u_train_data
 
     def register_model(self, model):
         """Register customized model for federated learning.
@@ -347,6 +351,7 @@ def _set_random_seed(seed):
     np.random.seed(seed)
     torch.manual_seed(seed)
     torch.cuda.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
 
 
 # Initialize the global coordinator object
@@ -486,13 +491,20 @@ def register_dataset(train_data, test_data, val_data=None):
     """Register datasets for federated learning training.
 
     Args:
-        train_data (:obj:`FederatedDataset`): Training dataset.
+        train_data (:obj:`FederatedDataset` or dict[obj:`FederatedDataset`]): Training dataset.
         test_data (:obj:`FederatedDataset`): Testing dataset.
         val_data (:obj:`FederatedDataset`): Validation dataset.
+        train_data.s_train_data (:obj:`FederatedDataset`): Supervised training dataset (semi-supervised setting only).
+        train_data.u_train_data (:obj:`FederatedDataset`): Unsupervised training dataset (semi-supervised setting only).
     """
     global _global_coord
-    _global_coord.register_dataset(train_data, test_data, val_data)
+    if type(train_data) == dict:
+        s_train_data = train_data['s_train_data']
+        u_train_data = train_data['u_train_data']
 
+        _global_coord.register_dataset(u_train_data, test_data, val_data, s_train_data, u_train_data)
+    else:
+        _global_coord.register_dataset(train_data, test_data, val_data)
 
 def register_model(model):
     """Register model for federated learning training.
